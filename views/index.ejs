@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>To Do List</title>
+
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css"
+    />
+    <link
+        rel="stylesheet"
+        href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <link rel="stylesheet" href="/css/all.css"> 
+</head>
+<body>
+    <div class="container">
+        <h1>MY Todo</h1>
+        <form class="w-25" onSubmit="return false;">
+          <input
+            type="text"
+            class="form-control"
+            id="newTodo"
+            aria-describedby="emailHelp"
+            placeholder="add item"
+          />
+  
+          <button type="button" class="btn ml-2" id="addButton">
+            Add
+          </button>
+        </form>      
+        <div id="list">
+            <% for(item in todolist){ %>
+                <li><%- todolist[item].content %> <input type="button" class="btn btn-primary" data-id="<%- item %>" value="刪除"></li>
+            <% } %>
+            
+        </div>
+           
+            
+            <!--display todo content-->
+         
+    </div>
+<script src="/js/all.js"></script>
+</body>
+</html>

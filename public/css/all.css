@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    list-style-type: none;
+}
+body {
+    background-image: url("https://i.imgur.com/2XuDmZS.jpg");
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+form {
+    display: flex;
+}
+.btn {
+    color: white;
+    background-color: #4aa0b5;
+}
+.checked {
+    color: #ccc;
+    text-decoration: line-through;
+    font-style: italic;
+}
+.fa {
+    margin: 0 5px;
+    color: #bbb;
+}
+li > label {
+    width: 20%;
+}
